@@ -45,6 +45,7 @@ import notFoundImage from "../assets/not_found_image.png";
 export default {
     computed: {
         storeMovies() {
+            console.log(this.$store.state.api.movies);
             return this.$store.state.api.movies;
         },
         storeBeforePage() {
@@ -91,7 +92,7 @@ export default {
         rerequestAPI() {
             const { title, page, year } = this.$store.state;
 
-            this.$store.dispatch("api/requestAPI", `s=${title}&page=${page}&$y=${year}}`);
+            this.$store.dispatch("api/requestAPI", { title, year, page });
         },
         // 포스터가 없으면 "not found" 이미지로 대체
         getPosterImage(movie) {

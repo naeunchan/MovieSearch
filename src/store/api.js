@@ -10,8 +10,12 @@ export default {
     mutations: {
         // 검색 결과 저장
         setMoviesInformation(state, results) {
+            const remain = Math.floor(results.totalResults % 10);
+
             state.movies = results.Search;
-            state.totalResults = Math.floor(results.totalResults / 10 + 1).toString();
+            state.totalResults = Math.floor(
+                results.totalResults / 10 + parseInt(`${remain ? 1 : 0}`)
+            ).toString();
         },
     },
     actions: {
@@ -30,8 +34,10 @@ export default {
                 return;
             }
 
+            if (movies.style.display === "none") {
+                movies.style.display = "";
+            }
             commit("setMoviesInformation", results);
-            movies.style.display = "";
         },
     },
 };
