@@ -2,6 +2,7 @@
 
 -   [Vue3 version GiHub Repo](https://github.com/Leon-Miller/notion-clone-programmers)
 -   [NuxtJS(Vue2) Version GitHub Repo](https://github.com/Leon-Miller/notion-clone-programmers-nuxt)
+-   [![Netlify Status](https://api.netlify.com/api/v1/badges/ca2ea302-1c79-4a5e-9afa-863fc6b943e5/deploy-status)](https://app.netlify.com/sites/sad-spence-65b8fd/deploys)
 
 # 📌 8주차 과제[Mission8]
 
