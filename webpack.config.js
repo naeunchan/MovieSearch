@@ -49,11 +49,9 @@ module.exports = {
                 },
             ],
         }),
-        new Webpack.DefinePlugin({
-            "process.env.API_KEY": JSON.stringfiy(process.env.API_KEY),
-        }),
     ],
     devServer: {
+        port: 8079,
         historyApiFallback: true,
     },
 };

@@ -30,10 +30,7 @@ export default {
 
             const { title, page, year } = this.$store.state;
 
-            this.$store.dispatch(
-                "api/requestAPI",
-                `s=${title}&page=${page}&${year === "" ? "" : `y=${year}`}`
-            );
+            this.$store.dispatch("api/requestAPI", { title, year, page });
         },
     },
 };
